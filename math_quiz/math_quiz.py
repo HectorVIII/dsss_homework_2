@@ -40,17 +40,17 @@ def math_quiz():
         num2 = integer_generator(1, 5)
         operator = operator_generator()
 
-        PROBLEM, ANSWER = question_generator(num1, num2, operator)
-        print(f"\nQuestion: {PROBLEM}")
+        problem, answer = question_generator(num1, num2, operator)
+        print(f"\nQuestion: {problem}")
         
-        # Error handling for user input
+        # Error handling for users input
         try:
             user_answer = int(input("Your answer: "))
-            if user_answer == correct_answer:
+            if user_answer == answer:
                 print("Correct! You earned a point.")
                 score += 1
             else:
-                print(f"Wrong answer. The correct answer is {correct_answer}.")
+                print(f"Wrong answer. The correct answer is {answer}.")
         except ValueError:
             print("Invalid input. Please enter a number.")
 
