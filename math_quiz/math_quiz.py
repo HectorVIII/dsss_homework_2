@@ -43,7 +43,7 @@ def math_quiz():
         problem, answer = question_generator(num1, num2, operator)
         print(f"\nQuestion: {problem}")
         
-        # Error handling for users input
+        # Error handling for user input
         try:
             user_answer = int(input("Your answer: "))
             if user_answer == answer:
